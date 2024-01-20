@@ -1,0 +1,23 @@
+# Four types of lines are allowed:
+#   1) Lines that begin with a hash are comments,
+#   2) Blank lines are allowed,
+#   3) The column headings line in standard format.  This must be the first non-blank, non-comment line, &
+#   4) The data lines themselves.
+#
+
+row_id,b_cvd,sex,age,b_AF,b_atypicalantipsy,b_corticosteroids,b_impotence2,b_migraine,b_ra,b_renal,b_semi,b_sle,b_treatedhyp,diabetes_cat,bmi(nullable),ethnicity,fh_cvd,rati(nullable),sbp(nullable),sbps5(nullable),smoke_cat,town(nullable),postcode(nullable)
+
+# Some of these lines are rejected by the batch processor as they are not to specification.  
+# See the output file for details.
+1,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,-4.2,NG27AY
+1,0,0,45,0,2,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,-4.2,NG27AY
+1,0,0,45,0,1,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,5,-4.2,NG27AY
+1,0,0,45,0,1,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,6,-4.2,NG27AY
+2,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,
+3,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,-4.2,
+4,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,,NG27AY
+5,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,,0,-4.2,NG27AY
+6,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,,3.0,0,-4.2,NG27AY
+7,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,,140.0,3.0,0,-4.2,NG27AY
+8,0,0,45,0,0,0,0,0,0,0,0,0,0,0,,0,0,4.1,140.0,3.0,0,-4.2,NG27AY
+9,0,0,45,0,0,0,0,0,0,0,0,0,0,0,,0,0,,,,0,,

@@ -1,0 +1,32 @@
+# QRISK3 batch processor, .NET version 2018.0 - EH
+# This implements the QRISK3 algorithm using
+#   QRISK3 algorithm v. 2018.0, Townsend lookup table version No Townsend table, and Reference values version 2018.0
+#
+# Copyright (c) 2008-23 ClinRisk Ltd.
+# All rights reserved.
+#
+# "QRISK" is a registered trademark of the University of Nottingham and EMIS.
+#
+# Four types of lines are allowed:
+#   1) Lines that begin with a hash are comments,
+#   2) Blank lines are allowed,
+#   3) The column headings line in standard format.  This must be the first non-blank, non-comment line, &
+#   4) The data lines themselves.
+#
+
+row_id,b_cvd,sex,age,b_AF,b_atypicalantipsy,b_corticosteroids,b_impotence2,b_migraine,b_ra,b_renal,b_semi,b_sle,b_treatedhyp,diabetes_cat,bmi(nullable),ethnicity,fh_cvd,rati(nullable),sbp(nullable),sbps5(nullable),smoke_cat,town(nullable),postcode(nullable),inputValidity,algorithmValidity,algorithmStatus,ratioStatus,ratioSubstituteValue,sbpStatus,sbpSubstituteValue,bmiStatus,bmiSubstituteValue,townStatus,townSubstituteValue,smoke_catStatus,smoke_catSubstituteValue,ethnicityStatus,ethnicitySubstituteValue,sbps5Status,sbps5SubstituteValue,ageSexEthnicityHealthyScore,patientScore,QRISK3HeartAge
+
+# Some of these lines are rejected by the batch processor as they are not to specification.  
+# See the output file for details.
+1,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,-4.2,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_OK,0.0,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,1.754623,49
+1,0,0,45,0,2,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,-4.2,NG27AY,inputs:b_atypicalantipsy_not_boolean,algorithmValidity,algorithmStatus,ratioStatus,ratioSubstituteValue,sbpStatus,sbpSubstituteValue,bmiStatus,bmiSubstituteValue,townStatus,townSubstituteValue,smoke_catStatus,smoke_catSubstituteValue,ethnicityStatus,ethnicitySubstituteValue,sbps5Status,sbps5SubstituteValue,ageSexEthnicityHealthyScore,patientScore,QRISK3HeartAge
+1,0,0,45,0,1,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,5,-4.2,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_OK,0.0,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_MISSING,NonSmoker,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,2.25263,51
+1,0,0,45,0,1,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,6,-4.2,NG27AY,inputs:smoke_cat_not_in_range,algorithmValidity,algorithmStatus,ratioStatus,ratioSubstituteValue,sbpStatus,sbpSubstituteValue,bmiStatus,bmiSubstituteValue,townStatus,townSubstituteValue,smoke_catStatus,smoke_catSubstituteValue,ethnicityStatus,ethnicitySubstituteValue,sbps5Status,sbps5SubstituteValue,ageSexEthnicityHealthyScore,patientScore,QRISK3HeartAge
+2,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,,inputs:incorrect_no_of_parameters,algorithmValidity,algorithmStatus,ratioStatus,ratioSubstituteValue,sbpStatus,sbpSubstituteValue,bmiStatus,bmiSubstituteValue,townStatus,townSubstituteValue,smoke_catStatus,smoke_catSubstituteValue,ethnicityStatus,ethnicitySubstituteValue,sbps5Status,sbps5SubstituteValue,ageSexEthnicityHealthyScore,patientScore,QRISK3HeartAge
+3,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,-4.2,,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_OK,0.0,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,1.278531,45
+4,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,3.0,0,,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_OK,0.0,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,1.754623,49
+5,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,140.0,,0,-4.2,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_OK,0.0,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_MISSING,0.0,1.31,1.713936,48
+6,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,4.1,,3.0,0,-4.2,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_MISSING,123.1,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,1.417022,46
+7,0,0,45,0,0,0,0,0,0,0,0,0,0,0,29.1,0,0,,140.0,3.0,0,-4.2,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_MISSING,3.5,SBP_OK,0.0,BMI_OK,0.0,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,1.601598,48
+8,0,0,45,0,0,0,0,0,0,0,0,0,0,0,,0,0,4.1,140.0,3.0,0,-4.2,NG27AY,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_OK,0.0,SBP_OK,0.0,BMI_MISSING,26.8,TOWN_OK,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_OK,0.0,1.31,1.69159,48
+9,0,0,45,0,0,0,0,0,0,0,0,0,0,0,,0,0,,,,0,,,inputs:valid,results:VALID,CALCULATED_USING_ESTIMATED_OR_CORRECTED_DATA,RATIO_MISSING,3.5,SBP_MISSING,123.1,BMI_MISSING,26.8,TOWN_MISSING,0.0,SMOKE_CAT_OK,,ETHNICITY_MISSING,British,SBPS5_MISSING,0.0,1.31,1.217699,45

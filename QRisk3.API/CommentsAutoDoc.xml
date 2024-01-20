@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QRisk-API</name>
+    </assembly>
+    <members>
+        <member name="M:QRisk_API.Controllers.QRiskScoreController.Post(QRisk_API.Models.QRiskInputModel)">
+            <summary>
+            Return the 10 Year QRisk score
+            </summary>        
+            <response code="200">200 is returned if a Prediction score has been calculated.</response>
+            <response code="400">400 is returned if input cannot be processed (for example if the Age is out of range). Details will be in the returned response body.</response>                
+        </member>
+        <member name="P:QRisk_API.Models.Prediction.Results">
+            <summary>
+            List of Prediction Scores
+            </summary>
+        </member>
+        <member name="P:QRisk_API.Models.Prediction.Quality">
+            <summary>
+            List of DataQuality checks, showing any substituted values
+            </summary>
+        </member>
+        <member name="P:QRisk_API.Models.Prediction.Meta">
+            <summary>
+            Metadata about this call to the API
+            </summary>
+        </member>
+        <member name="P:QRisk_API.Models.Prediction.QRiskInputModel">
+            <summary>
+            The data provided by the user for this Prediction. Identifiable fields are stripped of data and marked as **PI** 
+            </summary>
+        </member>
+        <member name="T:QRisk_API.Models.QRiskInputModel">
+            <remarks>
+            Strict SNOMED definitions for all the below parameters are maintained by Endeavour Predict
+            Using the definitions will ensure the highest possible data quality and consistency being fed to the API
+            Please consult our website for further details on the definitions, which are also available in 
+            alternative terminologies.
+            In Attended Mode, clinicians may use their clinical judgement to over-ride automated searches, 
+            however this may change the outcome of the risk estimation, and the user assumes all risk for this.
+            IMPORTANT: IN ALL SITUATIONS QRISK3 MUST BE CONSIDERED AN *ESTIMATE* OF FUTURE CVD RISK, NOT AN ABSOLUTE
+            GUARANTEE, AND MUST IN ALL CASES BE INTERPRETED WITH DUE CLINICAL CONSIDERATION TO THE PATIENT'S COMPLETE
+            CLINICAL SITUATION. QRISK3 IS NOT A REPLACEMENT FOR CLINICAL JUDGEMENT.
+            </remarks>        
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.CVD">
+            <summary>
+            Patient has a diagnosis of CVD recorded at any time prior to the search date.
+            </summary>    
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.sex">
+            <summary>
+            Assigned sex at birth.
+            </summary>        
+            <example>Female</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.age">
+            <summary>
+            Patients age in years calculated on the search date.
+            </summary>
+            <example>45</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.atrialFibrillation">
+            <summary>
+            Atrial fibrillation at any time prior to the search date.
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.atypicalAntipsychoticMedication">
+            <summary>
+            On atypical antipsychotic medication?
+            Second generation ‘atypical’ antipsychotic - prescribed two or more issues in the previous 6 months(includes amisulpride, aripiprazole, clozapine, lurasidone, olanzapine, paliperidone, quetiapine, risperidone, sertindole, or zotepine).
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.systemicCorticosteroids">
+            <summary>
+            On regular steroid tablets?	
+            Systemic corticosteroids – prescribed two or more issues in the previous 6 months.
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.impotence">
+            <summary>
+            A diagnosis of, or treatment for, erectile dysfunction,at any time prior to the search date?	
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.migraines">
+            <summary>        
+            Diagnosis of migraine at any time prior to the search date?
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.rheumatoidArthritis">
+            <summary>
+             Rheumatoid arthritis at any time prior to the search date?
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.chronicRenalDisease">
+            <summary>
+            Chronic renal disease at any time prior to the search date?
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.severeMentalIllness">
+            <summary>
+            Diagnosis of severe mental illness (psychosis, severe depression, manic depression, schizophrenia) at any time prior to the search date?
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.systemicLupusErythematosus">
+            <summary>
+            Diagnosis of systemic lupus erythematosus (SLE) at any time prior to the search date?
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.bloodPressureTreatment">
+            <summary>
+            On blood pressure treatment?
+            Diagnosis of hypertension at any time in the patient’s records AND On antihypertensive treatment if 1+ script in last 6 months prior to the search date.
+            Antihypertensive treatment includes the following: 
+            Thiazides, Beta blockers, ACE inhibitors, Angiotensin II Antagonists, Calcium Channel Blockers.
+            Patients should only be included if both criteria are satisfied i.e.on treatment and have a diagnosis of hypertension.
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.diabetesStatus">
+            <summary>
+            Diabetes status
+            </summary>
+            <example>None</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.BMI">
+            <summary>
+            Body Mass Index (kg/m^2).
+            Acceptable/Credible Range: 18 to 47.
+            The most recently recorded body mass index for the patient recorded prior to the search date recorded in the last 5 years.
+            </summary>
+            <example>29.1</example>  
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.ethnicity">
+            <summary>
+            Ethnic group, chosen from the 17 categories used by QRisk3.
+            </summary>
+            <example>OtherWhiteBackground</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.familyHistoryCHD">
+            <summary>
+            Family history of coronary heart disease in a first degree relative under the age of 60 years recorded before the search date?
+            </summary>
+            <example>false</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.cholesterolRatio">
+            <summary>
+            Cholesterol/HDL ratio.
+            Acceptable/Credible Range: 1 to 12 
+            The most recent ratio of total serum cholesterol/HDL recorded in the last 5 years
+            </summary>
+            <example>4.1</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.systolicBloodPressures">
+            <summary>
+            Systolic blood pressure readings (mmHg).
+            Acceptable/Credible Range: 70 to 210
+            The most recent systolic blood pressure readings prior to search date recorded in the last 5 years
+            The order here is important, the readings in the list should be most recent first, ending with the oldest reading
+            </summary>
+            <example>[120,130,140]</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.systolicBloodPressureMean">
+            <summary>
+            Latest Systolic Blood Pressure mean reading (mmHg). If provided will be used instead of the List of systolicBloodPressures
+            </summary>
+            <example>140.4</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.systolicBloodPressureStDev">
+            <summary>
+            Standard Deviation for the systolicBloodPressureMean value
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.smokingStatus">
+            <summary>
+            Most recent confirmed smoking status.
+            </summary>
+            <example>NonSmoker</example>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.townsendScore">
+            <summary>
+            Townsend score. 
+            The Townsend score associated with the output area of a patient’s postcode.
+            See: https://statistics.ukdataservice.ac.uk/dataset/2011-uk-townsend-deprivation-scores#:~:text=The%20Townsend%20Deprivation%20Index%20is,is%20available%20for%20that%20area).
+            </summary>
+            <example>0</example>        
+        </member>
+        <member name="T:QRisk_API.Services.CalculationService">
+            <summary>
+            Method and supporting functions to call the QRisk3 calculator.
+            Escapsulated in this PUBLIC class so it can be called from nUnit AND the API Controller
+            </summary>
+        </member>
+        <member name="M:QRisk_API.Services.Extend.StandardDeviation(System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            The is the SAMPLE version of StDev, rather than the POPULATION version. This is the correct one for use in QRisk3
+            See: https://stackoverflow.com/questions/3141692/standard-deviation-of-generic-list
+            </summary>
+            <param name="values"></param>
+            <returns>SAMPLE version Standard Deviation</returns>
+        </member>
+        <member name="P:DataQuality.Parameter">
+            <summary>
+            Name of the Parameter used by the Calculator
+            </summary>
+        </member>
+        <member name="P:DataQuality.Quality">
+            <summary>
+            Was the parameter provided OK, out of range etc?
+            </summary>
+        </member>
+        <member name="P:DataQuality.SubstituteValue">
+            <summary>
+            The value used by the calculator if the value provided was substituted
+            </summary>
+        </member>
+        <member name="M:DataQuality.#ctor">
+            <summary>
+            Quality report from the calculator, showing any substituted values for missing or out of range parameters
+            </summary>
+        </member>
+        <member name="T:PredictionResult">
+            <summary>
+            Contains the ID, Score and Typical score (if available)
+            </summary>
+        </member>
+        <member name="T:Meta">
+            <summary>
+            Contains MetaData about the prediction: timings, versions, etc
+            </summary>
+        </member>
+        <member name="P:Meta.ApiVersion">
+            <summary>
+            Build version of the API.
+            </summary>
+        </member>
+        <member name="P:Meta.ApiTimeStampUTC">
+            <summary>
+            ISO DateTime (UTC) that the API was invoked
+            </summary>
+        </member>
+        <member name="P:Meta.CalculatorVersion">
+            <summary>
+            Build version of the Calculator.
+            </summary>
+        </member>
+        <member name="P:Meta.CalculatorResultStatus">
+            <summary>
+            Status result from the Calculator.
+            </summary>
+        </member>
+        <member name="P:Meta.CalculatorResultStatusReason">
+            <summary>
+            Used to hold extra information if the Calculator was unable to produce a Score (reason for failure).
+            </summary>
+        </member>
+        <member name="P:Meta.PerformedSystolicBloodPressureCalc">
+            <summary>
+            True if we have converted a list of SystolicBloodPressures to the Mean and Standard Deviation. Details of the conversion will be found in a "systolicBloodPressures" DataQuality section
+            </summary>
+        </member>
+    </members>
+</doc>

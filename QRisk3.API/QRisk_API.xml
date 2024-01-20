@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QRisk-API</name>
+    </assembly>
+    <members>
+        <member name="P:QRisk_API.Models.QRiskInputModel.b_AF">
+            <summary>
+            Atrial fibrillation?
+            </summary>
+        </member>
+        <member name="P:QRisk_API.Models.QRiskInputModel.smoke_cat">
+            <summary>
+            Smoking status
+            </summary>
+        </member>
+    </members>
+</doc>
