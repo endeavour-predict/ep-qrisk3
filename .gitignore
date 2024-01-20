@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/QRisk3.API/obj
+/QRisk3.API.Tests/bin/Debug/net8.0
+/QRisk3.API.Tests/obj
+/QRisk3.Engine.Tests/bin
+/QRisk3.Engine.Tests/obj
+/_SUPPLIED/BatchProcessor/obj
+/_SUPPLIED/Engine/.vs/QRISK3-EH
+/_SUPPLIED/Engine/bin/Debug
+/_SUPPLIED/Engine/obj
