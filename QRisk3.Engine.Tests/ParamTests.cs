@@ -1,4 +1,5 @@
 using ep_models;
+using NUnit.Framework.Internal;
 
 namespace QRisk3.Engine.Tests
 {
@@ -15,7 +16,8 @@ namespace QRisk3.Engine.Tests
         {            
             var tests = test_packs.QRisk3_Resources.FileTests;            
             var service = new ep_service.PredictionService();
-
+            var expectedMinNumberOfParamTests = 5;
+            int testsRun = 0;
             foreach (var test in tests)
             {
                 var actual_serviceResult = service.GetScore(test.EPInputModel);
@@ -31,18 +33,21 @@ namespace QRisk3.Engine.Tests
                 var expected_Meta = expected_engineScores.CalculationMeta;
 
                 // we always get a score, even if it's 0.0
-                Assert.IsTrue(expected_QRisk3Score.score == actual_QRisk3Score.score, test.TestName);
+                Assert.AreEqual(expected_QRisk3Score.score, actual_QRisk3Score.score, test.TestName);
 
                 // we don't always get a heart age score (like when CVD = true) so we need to check whether we're expecting one
                 if (expected_QRisk3HeartAgeScore != null)
                 {
-                    Assert.IsTrue(expected_QRisk3HeartAgeScore.score == actual_QRisk3HeartAgeScore.score, test.TestName);
+                    Assert.AreEqual(expected_QRisk3HeartAgeScore.score, actual_QRisk3HeartAgeScore.score, test.TestName);
                 }
 
                 // Final assertion is that the calc reasons match
-                Assert.IsTrue(expected_Meta.EngineResultStatus == actual_Meta.EngineResultStatus, test.TestName);
-                Assert.IsTrue(expected_Meta.EngineResultStatusReason == actual_Meta.EngineResultStatusReason, test.TestName);
-            }                        
+                Assert.AreEqual(expected_Meta.EngineResultStatus, actual_Meta.EngineResultStatus, test.TestName);
+                Assert.AreEqual(expected_Meta.EngineResultStatusReason, actual_Meta.EngineResultStatusReason, test.TestName);
+                testsRun++;
+            }
+            Assert.IsTrue(testsRun >= expectedMinNumberOfParamTests, "Number of tests");
+            
         }
     }
 }
