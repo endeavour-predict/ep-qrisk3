@@ -1,4 +1,4 @@
-using ep_service.Models;
+using ep_models;
 
 namespace QRisk3.Engine.Tests
 {
@@ -16,9 +16,9 @@ namespace QRisk3.Engine.Tests
         {
             /***************
             1. Arrange
-            ***************/            
+            ***************/
             // Get the 2M row test pack from the test_packs dependency            
-            var csv = test_packs.Resources.QRisk_2e6;
+            var csv = test_packs.QRisk3_Resources.TwoMillion;
             // get a referece to the service that will pass the data to the QRisk calculation engine
             var service = new ep_service.PredictionService();
 

@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -23,7 +23,9 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\_SUPPLIED\Engine\QRISK3-EH.csproj" />
+    <ProjectReference Include="..\..\ep-models\ep_models.csproj" />
+    <ProjectReference Include="..\..\ep-services\ep-service\ep_service.csproj" />
+    <ProjectReference Include="..\..\test-packs\test-packs.DOTNET\test-packs.csproj" />
   </ItemGroup>
 
 </Project>

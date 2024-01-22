@@ -14,3 +14,5 @@
 /_SUPPLIED/Engine/obj
 /QRisk3.Engine.OnlineTests/bin/Debug/net8.0
 /QRisk3.Engine.OnlineTests/obj
+/EP_QRisk3/bin/Debug/net6.0
+/EP_QRisk3/obj
