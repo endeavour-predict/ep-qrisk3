@@ -18,3 +18,5 @@
 /EP_QRisk3/obj
 /EP_QRisk3.Batch
 /QRisk3.API.Tests/bin/Debug/net6.0
+/EP_QRisk3.Engine.Tests/bin
+/EP_QRisk3.Engine.Tests/obj
