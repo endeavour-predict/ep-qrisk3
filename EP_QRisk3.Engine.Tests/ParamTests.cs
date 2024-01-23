@@ -6,6 +6,7 @@ namespace QRisk3.Engine.Tests
     [TestFixture]
     public class ParamTests
     {
+        
         [SetUp]
         public void Setup()
         {            
@@ -13,10 +14,12 @@ namespace QRisk3.Engine.Tests
 
         [Test]
         public void QRisk3_FileBasedParamTests()
-        {            
+        {
+            var expectedMinNumberOfParamTests = 18;
+
             var tests = test_packs.QRisk3_Resources.FileTests;            
             var service = new ep_service.PredictionService();
-            var expectedMinNumberOfParamTests = 10;
+            
             int testsRun = 0;
             foreach (var test in tests)
             {
