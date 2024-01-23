@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRISK3-EH", "..\qrisk3\Engi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EP_QRisk3.Batch", "EP_QRisk3.Batch\EP_QRisk3.Batch.csproj", "{3683D641-E1C8-4F41-97ED-6901A07513F4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ep-api", "..\ep-services\ep_api\ep-api.csproj", "{1D2F5478-7011-4E2E-8438-E19128E35EA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D2F5478-7011-4E2E-8438-E19128E35EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D2F5478-7011-4E2E-8438-E19128E35EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D2F5478-7011-4E2E-8438-E19128E35EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D2F5478-7011-4E2E-8438-E19128E35EA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{9ABC755A-0591-47C9-95A2-D5112B3EF710} = {A17273D1-D9E1-4562-A11A-B60B0719C275}
 		{103B008C-6C28-4ADC-A602-EF11C54AC256} = {A17273D1-D9E1-4562-A11A-B60B0719C275}
 		{AE437F97-AA02-42C0-A104-77F05558DA07} = {A17273D1-D9E1-4562-A11A-B60B0719C275}
+		{1D2F5478-7011-4E2E-8438-E19128E35EA2} = {A17273D1-D9E1-4562-A11A-B60B0719C275}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B973BAD5-C575-4171-A700-8674F4266109}
