@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test-packs", "..\test-packs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRISK3-EH", "..\qrisk3\Engine\QRISK3-EH.csproj", "{AE437F97-AA02-42C0-A104-77F05558DA07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EP_QRisk3.Batch", "EP_QRisk3.Batch\EP_QRisk3.Batch.csproj", "{3683D641-E1C8-4F41-97ED-6901A07513F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AE437F97-AA02-42C0-A104-77F05558DA07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE437F97-AA02-42C0-A104-77F05558DA07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE437F97-AA02-42C0-A104-77F05558DA07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3683D641-E1C8-4F41-97ED-6901A07513F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

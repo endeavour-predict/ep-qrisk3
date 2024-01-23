@@ -16,7 +16,7 @@ namespace QRisk3.Engine.Tests
         {            
             var tests = test_packs.QRisk3_Resources.FileTests;            
             var service = new ep_service.PredictionService();
-            var expectedMinNumberOfParamTests = 5;
+            var expectedMinNumberOfParamTests = 10;
             int testsRun = 0;
             foreach (var test in tests)
             {

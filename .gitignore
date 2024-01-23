@@ -16,3 +16,5 @@
 /QRisk3.Engine.OnlineTests/obj
 /EP_QRisk3/bin/Debug/net6.0
 /EP_QRisk3/obj
+/EP_QRisk3.Batch
+/QRisk3.API.Tests/bin/Debug/net6.0
