@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EP_QRisk3", "EP_QRisk3\EP_Q
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{2C1B09C6-59A0-4CA7-BE38-33294948C307}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{A8B55D50-1AAC-494D-8CB8-6FDCA5533E97}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TEMP", "TEMP", "{A17273D1-D9E1-4562-A11A-B60B0719C275}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ep_models", "..\ep-models\ep_models.csproj", "{84B0C846-8FA7-47BF-9F27-FC9C260B2271}"
@@ -23,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test-packs", "..\test-packs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRISK3-EH", "..\qrisk3\Engine\QRISK3-EH.csproj", "{AE437F97-AA02-42C0-A104-77F05558DA07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EP_QRisk3.Batch", "EP_QRisk3.Batch\EP_QRisk3.Batch.csproj", "{3683D641-E1C8-4F41-97ED-6901A07513F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EP_QRisk3.Batch", "EP_QRisk3.Batch\EP_QRisk3.Batch.csproj", "{3683D641-E1C8-4F41-97ED-6901A07513F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
