@@ -15,7 +15,7 @@ namespace QRisk3.Engine.Tests
         [Test]
         public void QRisk3_FileBasedParamTests()
         {
-            var expectedMinNumberOfParamTests = 30;
+            var expectedMinNumberOfParamTests = 33;
 
             var tests = test_packs.QRisk3_Resources.FileTests;            
             var service = new ep_service.PredictionService();
