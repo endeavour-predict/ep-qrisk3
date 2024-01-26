@@ -23,6 +23,7 @@ namespace QRisk3.Engine.Tests
             int testsRun = 0;
             foreach (var test in tests)
             {
+                Console.WriteLine("Testing Paramater JSON: " + test.TestName);
                 var actual_serviceResult = service.GetScore(test.EPInputModel);
                 var actual_engineScores = actual_serviceResult.EngineResults.Where(p => p.EngineName == Core.EPStandardDefinitions.Engines.QRisk3).Single();
                 var actual_QRisk3Score = actual_engineScores.Results.Where(p => p.id.ToString() == Globals.QRiskScoreUri).Single();
