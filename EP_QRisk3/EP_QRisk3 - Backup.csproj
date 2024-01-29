@@ -6,11 +6,10 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="ep_service" Version="1.0.1">
+	  <PackageReference Include="ep_service" Version="1.0.0">
 		  
 	  </PackageReference>
   </ItemGroup>
