@@ -20,3 +20,5 @@
 /QRisk3.API.Tests/bin/Debug/net6.0
 /EP_QRisk3.Engine.Tests/bin
 /EP_QRisk3.Engine.Tests/obj
+/EP_QRisk3/bin/Release
+/EP_QRisk3/Properties/PublishProfiles
