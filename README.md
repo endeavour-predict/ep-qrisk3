@@ -11,7 +11,7 @@ The EP- QRISK3 Cardiovascular Risk Assessment was created by Endeavour Predict L
 The current version was released in 2023 and is copyright to Endeavour Predict Ltd.
 It is released under [version 3 of the GNU General Public License](http://www.gnu.org/licenses/gpl.html)
 
-The source code, containing a copy of this license is [published on GitHub](https://github.com/endeavour-predict/qrisk3).
+The source code, containing a copy of this license is [published on GitHub](https://github.com/endeavour-predict/ep-qrisk3).
 
 Note that inaccurate implementations of risk scores can lead to wrong patients being given the wrong treatment
 
