@@ -27,4 +27,3 @@ This source code is designed to operate as a reference for implementors seeking 
 It is not designed as the sole basis for a live implementation.
 
 Please contact Endeavour Predict ltd enquiries@endeavourhealth.org for information on usage and safety information, support for open source implementations and licensing of device regulated sofware that is generated from this code.
-
