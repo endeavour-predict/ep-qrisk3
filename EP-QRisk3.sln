@@ -16,8 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Help", "Help", "{C2A0D2CB-1
 		Help\EP_Qrisk3 DLL and Batch. Examples for use.docx = Help\EP_Qrisk3 DLL and Batch. Examples for use.docx
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test-packs", "..\test-packs\test-packs.DOTNET\test-packs.csproj", "{B6CEBB9A-1E67-432B-BFFA-7CDCC5406363}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,10 +34,6 @@ Global
 		{AB020F5D-7A02-4A66-A7BB-CAC6103A3D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB020F5D-7A02-4A66-A7BB-CAC6103A3D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB020F5D-7A02-4A66-A7BB-CAC6103A3D68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6CEBB9A-1E67-432B-BFFA-7CDCC5406363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6CEBB9A-1E67-432B-BFFA-7CDCC5406363}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6CEBB9A-1E67-432B-BFFA-7CDCC5406363}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6CEBB9A-1E67-432B-BFFA-7CDCC5406363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
