@@ -1,0 +1,7 @@
+﻿1.0.0
+Jan 2024
+First release
+
+1.0.1
+27 Feb 2024
+Downgrade to .NET Standard 2.0

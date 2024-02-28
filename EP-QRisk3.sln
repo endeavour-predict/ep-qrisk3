@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EP_QRisk3.Batch", "EP_QRisk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EP_QRisk3.Tests", "EP_QRisk3.Engine.Tests\EP_QRisk3.Tests.csproj", "{AB020F5D-7A02-4A66-A7BB-CAC6103A3D68}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Help", "Help", "{C2A0D2CB-15A4-4EE5-9BD1-DABC8E468FC3}"
+	ProjectSection(SolutionItems) = preProject
+		Help\EP_Qrisk3 DLL and Batch. Examples for use.docx = Help\EP_Qrisk3 DLL and Batch. Examples for use.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
