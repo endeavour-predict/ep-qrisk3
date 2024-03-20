@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	  <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,12 +6,11 @@
     <Nullable>enable</Nullable>-->
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="ep_service" Version="1.0.2">
-		  
+	  <PackageReference Include="ep_service" Version="1.0.3">		  
 	  </PackageReference>
   </ItemGroup>
 
