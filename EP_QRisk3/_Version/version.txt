@@ -1,9 +1,6 @@
-﻿1.0.3
+1.0.3
 20 Mar 2024
 Update all dependency chains
-
-
-
 ---------------------------------
 1.0.1
 27 Feb 2024
@@ -13,4 +10,3 @@ Downgrade to .NET Standard 2.0
 Jan 2024
 First release
 ---------------------------------
-
