@@ -10,8 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="ep_service" Version="1.0.3">		  
-	  </PackageReference>
+    <ProjectReference Include="..\..\ep-services\ep-service\ep_service.csproj" />
   </ItemGroup>
 
 </Project>

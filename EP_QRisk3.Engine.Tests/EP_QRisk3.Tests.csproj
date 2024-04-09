@@ -10,13 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ep_service" Version="1.0.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <PackageReference Include="NUnit.Analyzers" Version="3.6.1" />
-    <PackageReference Include="coverlet.collector" Version="6.0.0" />
-    <PackageReference Include="test-packs" Version="1.0.7" />    
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ep-services\ep-service\ep_service.csproj" />
+    <ProjectReference Include="..\..\ep_core\ep_core\ep_core.csproj" />
+    <ProjectReference Include="..\..\test-packs\test-packs.DOTNET\test-packs.csproj" />
   </ItemGroup>
 
 </Project>

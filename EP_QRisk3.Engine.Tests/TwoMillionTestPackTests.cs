@@ -1,3 +1,4 @@
+using ep_core;
 using ep_models;
 
 namespace QRisk3.Engine.Tests
@@ -42,7 +43,7 @@ namespace QRisk3.Engine.Tests
                 var expectedscore= Double.Parse(row[42]);
                 string expectedHeartAge = row[43];
                 var serviceResult = service.GetScore(inputModel);
-                var engineScores = serviceResult.EngineResults.Where(p=>p.EngineName == Core.EPStandardDefinitions.Engines.QRisk3).Single();
+                var engineScores = serviceResult.EngineResults.Where(p=>p.EngineName == EPStandardDefinitions.Engines.QRisk3).Single();
                 var QRisk3Score = engineScores.Results.Where(p=>p.id.ToString() == Globals.QRiskScoreUri).Single();
                 var QRisk3HeartAgeScore = engineScores.Results.Where(p => p.id.ToString() == Globals.QRiskScoreUri+ "HeartAge").SingleOrDefault();
 
